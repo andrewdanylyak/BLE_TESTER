@@ -77,6 +77,7 @@ public class BleTools {
         }
         if(!bluetoothAdapter.isEnabled()){
             bluetoothAdapter.enable();
+            //TODO дороботать в будущем обработку системных функций
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
@@ -87,9 +88,8 @@ public class BleTools {
             ((Activity)mMianActivityContext).finish();
             return;
         }
-        else {
-            mMainActivityHandler.obtainMessage(CBleEvents.BleAdapterTurnedOn,"Bluetooth adapter is turned on").sendToTarget();;
-        }
+        mMainActivityHandler.obtainMessage(CBleEvents.BleAdapterTurnedOn,"Bluetooth adapter is turned on").sendToTarget();
+
     }
 
 }
