@@ -17,4 +17,14 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         Process.killProcess(Process.myPid());
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 }
