@@ -17,7 +17,7 @@ public class BleTools {
     BleTools(Context context, Handler handler){
         mMianActivityContext = context;
         mMainActivityHandler = handler;
-        mMainActivityHandler.obtainMessage(CBleEvents.Created,"Created").sendToTarget();
+        //mMainActivityHandler.obtainMessage(CBleEvents.Created,"Created").sendToTarget();
     }
 
 
