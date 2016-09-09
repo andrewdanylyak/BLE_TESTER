@@ -67,7 +67,9 @@ public class MainActivity extends AppCompatActivity {
                 case BleTools.CBleEvents.Created:
                     updateStatus((String)msg.obj);
                     break;
-
+                case BleTools.CBleEvents.BleStackNotAvailable:
+                    updateStatus((String)msg.obj);
+                    break;
             }
         }
     };
